@@ -1,0 +1,163 @@
+body {
+    background-color: #B04759; /* Dark pink background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .circle-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow circles to wrap to next line on small screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Gap between the circles */
+    pointer-events: none;
+  }
+
+  .circle {
+    position: relative;
+    width: 450px; /* Larger circle width */
+    height: 450px; /* Larger circle height */
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 2s ease;
+  
+  
+    pointer-events: auto;
+
+    transform-origin: left left;
+    
+  }
+
+ 
+
+
+  .inner-circle {
+    position: absolute;
+    top: 10%; /* Increase top and left positions */
+    left: 10%;
+    width: 85%; /* Increase the size of the inner circle */
+    height: 85%;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Inner circle shadow */
+ 
+  }
+
+
+
+  #logo1 {
+    position: absolute;
+
+    left: 23%;
+    width: 25%; /* Logo takes up the whole inner circle */
+    height: 25%;
+    object-fit: contain;
+    transition: all 1s;
+  }
+
+  #logo2{
+    position: absolute;
+
+    right: 25%;
+    width: 20%;  
+    height: 20%;
+    object-fit: contain;
+    transition: all 1.5s;
+  }
+  
+  
+
+  .custom-code-container {
+    display: none;
+  
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+   
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+   width: 75%;
+    height: 100%;
+  }
+
+  .logo-in-custom-code {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 300px; /* Increase the size of the selected logo */
+    max-height: 300px; /* Increase the size of the selected logo */
+    object-fit: contain;
+  }
+
+  @keyframes splashAnimation {
+    0% {
+      
+      opacity: 1;
+    }
+    100% {
+     
+      opacity: 0;
+    }
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    /* For smaller screens like phones */
+    .circle {
+      width: 300px; /* Adjust size for small screens */
+      height: 300px; /* Adjust size for small screens */
+    }
+
+  }
+  @media only screen and (max-width: 1325px) {
+    #logo2{
+      position: absolute;right: 20%;
+      
+    }
+    #logo1{
+      position: absolute;left: 19%;
+    }
+  }
+  @media only screen and (max-width: 915px) {
+    #logo2{
+      position: absolute;top: 60%;right: 37%;
+      width: 200px;height: 200px;
+    }
+    #logo1{
+      position: absolute;top: 15%;left: 35%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    #logo2{
+      position: absolute;;right: 17%;
+      width: 150px;height: 150px;
+    }
+    #logo1{
+      position: absolute;;left: 17%;
+    }
+  }
+  @media only screen and (max-width: 616px) {
+    #logo2{
+      position: absolute;top: 60%;right: 35%;
+      width: 150px;height: 150px;
+    }
+    #logo1{
+      position: absolute;top: 15%;left: 35%;
+    }
+  }
+
+
+  
+  
+
+ 
